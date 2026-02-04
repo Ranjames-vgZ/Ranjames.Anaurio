@@ -31,7 +31,7 @@ def format_student_record(student):
 
 def format_table_header():
     """Retrun formatted table header for student list."""
-    header = f"\n{'ID':<12} {'Name':<25} {'Age':<5} {'Avg Grade':<18}\n"
+    header = f"\n{'ID':<12} {'Name':<25} {'Age':<5} {'Avg Grade':<10}\n"
     header += "-"* 52 + "\n"
     return header
 

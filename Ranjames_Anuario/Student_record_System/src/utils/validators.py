@@ -86,8 +86,8 @@ def validate_email(email):
     email = email.strip().lower()
 
 # Check for spaces
-    if '' in email:
-     return False
+    if ' ' in email:
+        return False
 
 #Must have exactly one @ symbol
     if email.count('@') != 1:
