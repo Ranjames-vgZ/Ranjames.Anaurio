@@ -70,11 +70,11 @@ def delete_student(student_id):
     Returns:
         Bool: true if deleted successfully
     """
-    student  = find_student_by_id(student_id)
+    student = find_student_by_id(student_id)
     if not student:
         return False
     
-    student.remove(student)
+    students.remove(student)
     return True
 
 def get_student_count():

@@ -14,7 +14,7 @@ def format_student_record(student):
      returns: formatted string
     """
     output = "\n" + "="*60 + "\n"
-    output += f"Student ID: {student.get('id, N/A')}\n"
+    output += f"Student ID: {student.get('id', 'N/A')}\n"
     output += f"Name: {student.get('name', 'N/A')}\n"
     output += f"Age: {student.get('age', 'N/A')}\n"
 
@@ -35,13 +35,13 @@ def format_table_header():
     header += "-"* 52 + "\n"
     return header
 
-def fomrat_table_header(student):
+def format_table_row(student):
     """format a single student record as a table row."""
-    student_id = student.get('id, N/A')
+    student_id = student.get('id', 'N/A')
     name = student.get('name', 'N/A')[:24] #trucate long names
     age = student.get('age', 'N/A')
 
-    grades = student.get('grade', [])
-    weighted_avg = (grades[0] * 0.20 + grades[1] * 0.20 + grades[2] * grades[3] * 0.40) if grades else 0
+    grades = student.get('grades', [])
+    weighted_avg = (grades[0] * 0.20 + grades[1] * 0.20 + grades[2] * 0.20 + grades[3] * 0.40) if grades else 0
 
-    return f"{student_id:<12} {name:<25} {age:<5} {weighted_avg:<10.2F}\n"
+    return f"{student_id:<12} {name:<25} {age:<5} {weighted_avg:<10.2f}\n"

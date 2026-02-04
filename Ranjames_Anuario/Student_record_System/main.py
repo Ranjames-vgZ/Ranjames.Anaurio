@@ -7,7 +7,7 @@ Date: [02/02/2026]
 Version: 1.0 Part - 1 
 """
 
-from src.utils import validators, formatters, helpers  
+from src.utils import formatters, validators, helpers
 from src.data import student_data
 
 def display_menu(): 
@@ -244,4 +244,4 @@ def main():
              helpers.pause() 
              
 if __name__ == "__main__":
-    main()
+ main()
